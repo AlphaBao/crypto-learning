@@ -15,6 +15,8 @@ bitwise.byte.write(bits21);
 
 const bits23 = bitwise.byte.read(23);
 
+console.log('======================== bitwise ========================');
+
 console.log(`key: ${bitwise.bits.toString(bits23, 4)}`);
 console.log(`bits21(p1): ${bitwise.bits.toString(bits21, 4)}`);
 
@@ -48,6 +50,8 @@ const result = bitwise.bits.xor(C1_XOR_C2, bits66);
 // 范例： 对明文P做串流加密，转换成密文C。所使用的是串流金钥K，它来自金钥与初始向量。我们可以得到等式：C = P xor K。假如攻击者得知密文C1与C2来自同一把金钥与初始向量。那么攻击者就能透过底下公式得到明文P1与P2：
 // C1 xor C2 = (P1 xor K) xor (P2 xor K) = P1 xor P2.
 console.log('C1_XOR_C2 XOR P2 === P1', bitwise.bits.toString(result, 4));
+
+console.log('======================== bitwise ========================');
 
 window.bitwise = bitwise;
 
